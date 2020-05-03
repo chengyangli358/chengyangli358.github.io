@@ -53,11 +53,56 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">主页</a></li>
+				<li><a href="/">沿途</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/">·</a></li>
+	        
+				<li><a href="/">不枉为少年</a></li>
 	        
 			</ul>
+			<br>
+			<div id="binft"></div>
+  <script>
+    var binft = function (r) {
+      function t() {
+        return b[Math.floor(Math.random() * b.length)]
+      }  
+      function e() {
+        return String.fromCharCode(94 * Math.random() + 33)
+      }
+      function n(r) {
+        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+          var l = document.createElement("span");
+          l.textContent = e(), l.style.color = t(), n.appendChild(l)
+        }
+        return n
+      }
+      function i() {
+        var t = o[c.skillI];
+        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+      }
+      var l = "",
+      o = ["行千万里 在别忘了初心"].map(function (r) {
+      return r + ""
+      }),
+      a = 2,
+      g = 1,
+      s = 5,
+      d = 75,
+      b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+      c = {
+        text: "",
+        prefixP: -s,
+        skillI: 0,
+        skillP: 0,
+        direction: "forward",
+        delay: a,
+        step: g
+      };
+      i()
+      };
+      binft(document.getElementById('binft'));
+  </script>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -113,6 +158,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -130,12 +177,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">沿途</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">·</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/">不枉为少年</a></li>
 		        
 				</ul>
 			</nav>
@@ -151,6 +200,90 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-html-笔记4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/03/html-%E7%AC%94%E8%AE%B04/">html 笔记4</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/html-%E7%AC%94%E8%AE%B04/" class="archive-article-date">
+  	<time datetime="2020-05-03T08:50:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>标签显示模式(display)：<br>     1.块级元素div(block-level)：一行只能放一个，高宽边距都可控，宽度默认百分百，是个盒子可放”块”，文 字标签不放”块”(p、h)</p>
+<pre><code>2.行内元素span(inlink-level)：一行可以放多个，高宽设置皆无效，默认宽度看内容，里面只放文字/行 (span),链接里面不再放(链接)
+
+3.行内块元素：(img、input、td)：可以设置宽高，一行可以放多个，相隔之间有空隙，宽高边距可设置</code></pre><p>  转换：行内元素转块：display：block<br>        块转行内：display：inline<br>        转行内快：display：inline-block</p>
+<p> 行高=高度(块) 文字水平居中<br> 行高&gt;高度(块) 文字偏下<br> 行高&lt;高度(块) 文字偏上</p>
+<p>##CSS背景：<br>             背景颜色(background-color：颜色值)，默认transparent：透明</p>
+<pre><code>     背景图片(background-image：url() ) url后不加引号
+
+     背景平铺(background-repeat：) repeat图像在纵向和横向上平铺、no-repeat不平铺、repeat-x、 repeat-y、在横/纵向平铺
+
+     背景位置(background-position) length||length 百分比   position||position 方位
+
+     背景附着(background-attachment：) scroll背景图像随对象内容滚动 fixed背景图像固定
+
+背景简写：background： color url() repeat scroll top center 顺序无要求
+
+背景透明(alpha)： background：rgba(#,#,#,透明度(0-1) )</code></pre><p>CSS特性：1.层叠性：当样式冲突时，执行最新的命令</p>
+<pre><code>     2.继承性：子标签会继承父标签的一些样式(text-、font-、line-)
+
+     3.优先级：选择器相同，根据层叠性，选择器不同，根据优先级
+
+属性后加!important&gt;行内1000 &gt; id0100 &gt; class0010 &gt; 标签0001&gt; 继承/*0000</code></pre><hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/03/html-%E7%AC%94%E8%AE%B04/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-html-笔记3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
