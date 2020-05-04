@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 平安喜乐 万事顺心</title>
+  <title>html 笔记5 | 平安喜乐 万事顺心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="平安喜乐 万事顺心">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="CSS盒子模型(box model)：   1.边框border：border-width：边框粗细 border-color：边框颜色  border-style：边框样式     样式：none(默认无)、solid(单实线)、dashed(虚线)、dotted(点线)等     可综合写，排列无顺序 border：粗细 样式 颜色     可分别对上(top)下(bottom)左(left)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html 笔记5">
+<meta property="og:url" content="http://yoursite.com/2020/05/04/html-%E7%AC%94%E8%AE%B05/index.html">
 <meta property="og:site_name" content="平安喜乐 万事顺心">
+<meta property="og:description" content="CSS盒子模型(box model)：   1.边框border：border-width：边框粗细 border-color：边框颜色  border-style：边框样式     样式：none(默认无)、solid(单实线)、dashed(虚线)、dotted(点线)等     可综合写，排列无顺序 border：粗细 样式 颜色     可分别对上(top)下(bottom)左(left)">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-04T11:40:46.000Z">
+<meta property="article:modified_time" content="2020-05-04T11:42:20.378Z">
 <meta property="article:author" content="柚子">
 <meta name="twitter:card" content="summary">
   
@@ -199,184 +203,179 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-html-笔记5" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      html 笔记5
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/04/html-%E7%AC%94%E8%AE%B05/" class="archive-article-date">
+
+        
+        <a href="/2020/05/04/html-%E7%AC%94%E8%AE%B05/" class="archive-article-date">
   	<time datetime="2020-05-04T11:40:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/04/html-%E7%AC%94%E8%AE%B05/">html 笔记5</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CSS盒子模型(box model)：<br>   1.边框border：border-width：边框粗细</p>
+<pre><code>border-color：边框颜色
 
-        <div class="article-info info-on-right">
-          
-          
+border-style：边框样式
 
+   样式：none(默认无)、solid(单实线)、dashed(虚线)、dotted(点线)等
+
+   可综合写，排列无顺序 border：粗细 样式 颜色
+
+   可分别对上(top)下(bottom)左(left)右(right)的边框规定样式
+
+   边框折叠：border-collapse：collapse</code></pre><p>   2.内边距padding：添加会使得盒子变大,(如果这个盒子没有指定宽度，则不会撑开盒子)</p>
+<pre><code>也有四个方位(padding-top/bottom/left/right)
+
+简写：一个值：上下左右都是相同像素的内边距
+
+      两个值：上下第一个值，左右一个值
+      三个值：上、左右、下
+      四个值：上、右、下、左(顺时针)</code></pre><p>   3.外边距margin：实现块级元素水平居中：1.有宽度 2.左右外边距设置为auto</p>
+<p>清除元素默认内外边距：*{margin：0；padding：0}  基本页面都会用到<br>  行内尽量只设置左右边距，不设置上下的(浏览器不兼容)</p>
+<p>上下外边距的合并(塌陷)：当上下两个相邻的块级元素相遇时，如果上面的元素有下边距margin-bottom，下面的元 素有上边距margin-top，则他们之间的垂直间距不是上下边距的和而是取两个值中较大的那一个，为避免这种情况， 尽量只给一个盒子添加margin的值</p>
+<p>嵌套块元素的边距合并(塌陷)：对于两个嵌套关系的块元素，如果父元素没有上内边距及边框，则父元素的上边距会 与子元素的上外边距发生合并，合并后的外边距为两者中的较大者。解决方案：可以为父元素定义上边框/内边距、 可以为父元素添加overflow：hidden </p>
+<p>为了盒子的稳定性：width&gt;padding&gt;margin</p>
+<p>拓展：圆角边框：语法：border-radius：length(半径)、也可以写百分比(直径的百分比)<br>                   正圆用宽和高的一半，半圆接矩形接半圆那种用高的一半(不用百分比)</p>
+<pre><code>盒子阴影：语法：box-shadow：水平阴影 垂直阴影 阴影(距离)虚实 阴影尺寸 阴影颜色 阴影大小</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/04/html-%E7%AC%94%E8%AE%B05/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/html-%E7%AC%94%E8%AE%B04/" class="archive-article-date">
-  	<time datetime="2020-05-03T08:50:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/03/html-%E7%AC%94%E8%AE%B04/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">html 笔记4</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/html-%E7%AC%94%E8%AE%B04/">html 笔记4</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/02/html-%E7%AC%94%E8%AE%B03/" class="archive-article-date">
-  	<time datetime="2020-05-02T10:42:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/02/html-%E7%AC%94%E8%AE%B03/">html 笔记3</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/01/html-%E7%AC%94%E8%AE%B02/" class="archive-article-date">
-  	<time datetime="2020-05-01T07:46:24.163Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/01/html-%E7%AC%94%E8%AE%B02/">html-笔记2</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/01/html-%E7%AC%94%E8%AE%B01/" class="archive-article-date">
-  	<time datetime="2020-05-01T01:59:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/01/html-%E7%AC%94%E8%AE%B01/">html 笔记1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/14/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-14T10:47:48.496Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -399,8 +398,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
