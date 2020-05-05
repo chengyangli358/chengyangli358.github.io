@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>html 笔记5 | 平安喜乐 万事顺心</title>
+  <title>html 笔记6 | 平安喜乐 万事顺心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CSS盒子模型(box model)：   1.边框border：border-width：边框粗细 border-color：边框颜色  border-style：边框样式     样式：none(默认无)、solid(单实线)、dashed(虚线)、dotted(点线)等     可综合写，排列无顺序 border：粗细 样式 颜色     可分别对上(top)下(bottom)左(left)">
+  <meta name="description" content="浮动(float)        为了使块级元素可以在一行显示(行内块会有空隙 浮动没有) 属性：none、left、right 特性：1.脱标(脱离标准流，浮动在标准流的上面)      2.盒子浮起来之后，原来的位置就给了下面的盒子      3.浮动会改变display属性，变为类似行内块 为了避免浮动脱标影响下面的标准流元素，所以需要给浮动的元素添加一个标准流的父亲 清除浮动：因为很多情况">
 <meta property="og:type" content="article">
-<meta property="og:title" content="html 笔记5">
-<meta property="og:url" content="http://yoursite.com/2020/05/04/html-%E7%AC%94%E8%AE%B05/index.html">
+<meta property="og:title" content="html 笔记6">
+<meta property="og:url" content="http://yoursite.com/2020/05/05/html-%E7%AC%94%E8%AE%B06/index.html">
 <meta property="og:site_name" content="平安喜乐 万事顺心">
-<meta property="og:description" content="CSS盒子模型(box model)：   1.边框border：border-width：边框粗细 border-color：边框颜色  border-style：边框样式     样式：none(默认无)、solid(单实线)、dashed(虚线)、dotted(点线)等     可综合写，排列无顺序 border：粗细 样式 颜色     可分别对上(top)下(bottom)左(left)">
+<meta property="og:description" content="浮动(float)        为了使块级元素可以在一行显示(行内块会有空隙 浮动没有) 属性：none、left、right 特性：1.脱标(脱离标准流，浮动在标准流的上面)      2.盒子浮起来之后，原来的位置就给了下面的盒子      3.浮动会改变display属性，变为类似行内块 为了避免浮动脱标影响下面的标准流元素，所以需要给浮动的元素添加一个标准流的父亲 清除浮动：因为很多情况">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-04T11:40:46.000Z">
-<meta property="article:modified_time" content="2020-05-04T11:42:20.378Z">
+<meta property="article:published_time" content="2020-05-05T13:05:15.000Z">
+<meta property="article:modified_time" content="2020-05-05T13:06:28.148Z">
 <meta property="article:author" content="柚子">
 <meta name="twitter:card" content="summary">
   
@@ -203,51 +203,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-html-笔记5" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-html-笔记6" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      html 笔记5
+      html 笔记6
     </h1>
   
 
         
-        <a href="/2020/05/04/html-%E7%AC%94%E8%AE%B05/" class="archive-article-date">
-  	<time datetime="2020-05-04T11:40:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-04</time>
+        <a href="/2020/05/05/html-%E7%AC%94%E8%AE%B06/" class="archive-article-date">
+  	<time datetime="2020-05-05T13:05:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>CSS盒子模型(box model)：<br>   1.边框border：border-width：边框粗细</p>
-<pre><code>border-color：边框颜色
+        <p>浮动(float)<br>        为了使块级元素可以在一行显示(行内块会有空隙 浮动没有)</p>
+<p>属性：none、left、right</p>
+<p>特性：1.脱标(脱离标准流，浮动在标准流的上面)<br>      2.盒子浮起来之后，原来的位置就给了下面的盒子<br>      3.浮动会改变display属性，变为类似行内块</p>
+<p>为了避免浮动脱标影响下面的标准流元素，所以需要给浮动的元素添加一个标准流的父亲</p>
+<p>清除浮动：因为很多情况下，不方便给父元素高度，以达到子元素有多少内容就显示多少内容<br>          但是因为浮动不占高度，所以父元素的高度为零，下面的标准流盒子就会挤上来，影响页面布局<br>   本质：清除浮动之后，父级就会自动检测高度，不会影响下面的布局<br>   方法：语法：clear：{} 属性值：left：不允许左侧有浮动元素(清除左侧浮动的影响)<br>                                 right：不允许右侧有浮动元素(清除右侧浮动的影响)<br>                                 both：同时清除两侧浮动的影响(一般就使用这个)<br>         1.额外标签法(隔墙法)：在最后浮动元素的末尾添加一个空标签，样式就是clear both<br>              通俗易懂，但是添加了许多无意义的标签，结构化较差<br>         2.父级元素添加overflow：hidden|auto|scroll 都可以解决<br>              方便，但是会隐藏溢出的内容/生成滚动条 影响美观<br>         3.使用：after 伪元素消除浮动<br>               添加 .clearfix(父元素的class，可自己取名字)：after {<br>                                       content: “”;<br>                                       display: block;<br>                                       height: 0;<br>                                       visibility:hidden;<br>                                       clear: both;<br>                               } 高版本<br>                     .clearfix {<br>                                 *zoom: 1;<br>                       }         低版本浏览器<br>              相当于自动生成了新的after标签添在后面，相当于升级版的额外标签法<br>          4.使用双伪类<br>                        .clearfix：before，<br>                        .clearfix：after {<br>                                            content： “”;<br>                                            display： table；<br>                            }<br>                        .clearfix：after {<br>                                            clear：both；<br>                            }<br>                        .clearfix {<br>                                            *zoom: 1;<br>                            }</p>
 
-border-style：边框样式
-
-   样式：none(默认无)、solid(单实线)、dashed(虚线)、dotted(点线)等
-
-   可综合写，排列无顺序 border：粗细 样式 颜色
-
-   可分别对上(top)下(bottom)左(left)右(right)的边框规定样式
-
-   边框折叠：border-collapse：collapse</code></pre><p>   2.内边距padding：添加会使得盒子变大,(如果这个盒子没有指定宽度，则不会撑开盒子)</p>
-<pre><code>也有四个方位(padding-top/bottom/left/right)
-
-简写：一个值：上下左右都是相同像素的内边距
-
-      两个值：上下第一个值，左右一个值
-      三个值：上、左右、下
-      四个值：上、右、下、左(顺时针)</code></pre><p>   3.外边距margin：实现块级元素水平居中：1.有宽度 2.左右外边距设置为auto</p>
-<p>清除元素默认内外边距：*{margin：0；padding：0}  基本页面都会用到<br>  行内尽量只设置左右边距，不设置上下的(浏览器不兼容)</p>
-<p>上下外边距的合并(塌陷)：当上下两个相邻的块级元素相遇时，如果上面的元素有下边距margin-bottom，下面的元 素有上边距margin-top，则他们之间的垂直间距不是上下边距的和而是取两个值中较大的那一个，为避免这种情况， 尽量只给一个盒子添加margin的值</p>
-<p>嵌套块元素的边距合并(塌陷)：对于两个嵌套关系的块元素，如果父元素没有上内边距及边框，则父元素的上边距会 与子元素的上外边距发生合并，合并后的外边距为两者中的较大者。解决方案：可以为父元素定义上边框/内边距、 可以为父元素添加overflow：hidden </p>
-<p>为了盒子的稳定性：width&gt;padding&gt;margin</p>
-<p>拓展：圆角边框：语法：border-radius：length(半径)、也可以写百分比(直径的百分比)<br>                   正圆用宽和高的一半，半圆接矩形接半圆那种用高的一半(不用百分比)</p>
-<pre><code>盒子阴影：语法：box-shadow：水平阴影 垂直阴影 阴影(距离)虚实 阴影尺寸 阴影颜色 阴影大小</code></pre>
       
 
       
@@ -326,7 +307,7 @@ border-style：边框样式
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/04/html-%E7%AC%94%E8%AE%B05/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/05/html-%E7%AC%94%E8%AE%B06/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -340,18 +321,9 @@ border-style：边框样式
   
 <nav id="article-nav">
   
-    <a href="/2020/05/05/html-%E7%AC%94%E8%AE%B06/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          html 笔记6
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/03/html-%E7%AC%94%E8%AE%B04/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">html 笔记4</div>
+    <a href="/2020/05/04/html-%E7%AC%94%E8%AE%B05/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">html 笔记5</div>
       <i class="icon-circle-right"></i>
     </a>
   

@@ -201,6 +201,73 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-html-笔记6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/05/html-%E7%AC%94%E8%AE%B06/">html 笔记6</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/05/html-%E7%AC%94%E8%AE%B06/" class="archive-article-date">
+  	<time datetime="2020-05-05T13:05:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>浮动(float)<br>        为了使块级元素可以在一行显示(行内块会有空隙 浮动没有)</p>
+<p>属性：none、left、right</p>
+<p>特性：1.脱标(脱离标准流，浮动在标准流的上面)<br>      2.盒子浮起来之后，原来的位置就给了下面的盒子<br>      3.浮动会改变display属性，变为类似行内块</p>
+<p>为了避免浮动脱标影响下面的标准流元素，所以需要给浮动的元素添加一个标准流的父亲</p>
+<p>清除浮动：因为很多情况下，不方便给父元素高度，以达到子元素有多少内容就显示多少内容<br>          但是因为浮动不占高度，所以父元素的高度为零，下面的标准流盒子就会挤上来，影响页面布局<br>   本质：清除浮动之后，父级就会自动检测高度，不会影响下面的布局<br>   方法：语法：clear：{} 属性值：left：不允许左侧有浮动元素(清除左侧浮动的影响)<br>                                 right：不允许右侧有浮动元素(清除右侧浮动的影响)<br>                                 both：同时清除两侧浮动的影响(一般就使用这个)<br>         1.额外标签法(隔墙法)：在最后浮动元素的末尾添加一个空标签，样式就是clear both<br>              通俗易懂，但是添加了许多无意义的标签，结构化较差<br>         2.父级元素添加overflow：hidden|auto|scroll 都可以解决<br>              方便，但是会隐藏溢出的内容/生成滚动条 影响美观<br>         3.使用：after 伪元素消除浮动<br>               添加 .clearfix(父元素的class，可自己取名字)：after {<br>                                       content: “”;<br>                                       display: block;<br>                                       height: 0;<br>                                       visibility:hidden;<br>                                       clear: both;<br>                               } 高版本<br>                     .clearfix {<br>                                 *zoom: 1;<br>                       }         低版本浏览器<br>              相当于自动生成了新的after标签添在后面，相当于升级版的额外标签法<br>          4.使用双伪类<br>                        .clearfix：before，<br>                        .clearfix：after {<br>                                            content： “”;<br>                                            display： table；<br>                            }<br>                        .clearfix：after {<br>                                            clear：both；<br>                            }<br>                        .clearfix {<br>                                            *zoom: 1;<br>                            }</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/05/html-%E7%AC%94%E8%AE%B06/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-html-笔记5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
