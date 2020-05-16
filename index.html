@@ -201,6 +201,107 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-html-笔记11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/16/html-%E7%AC%94%E8%AE%B011/">html 笔记11</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/16/html-%E7%AC%94%E8%AE%B011/" class="archive-article-date">
+  	<time datetime="2020-05-16T02:48:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>3D转换：</p>
+<p> 3D位移：transform：translate3d(x,y,z)  不可省略，可写零</p>
+<pre><code>transform：translateX() 仅仅在X轴移动
+
+transform：translateY() 仅仅在Y轴移动
+
+transform：translateZ() 仅仅在Z轴移动  单位一般为px</code></pre><p> 3D旋转：transform：rotate3d(x,y,z) 沿着轴旋转  多个方向旋转沿对角线</p>
+<pre><code>transform：rotateX( deg) 沿着X轴正方向旋转多少度   翻转方向(左手准则)
+
+transform：rotateY( deg) 沿着Y轴正方向旋转多少度   翻转方向(左手准则)
+
+transform：rotateZ( deg) 沿着Z轴正方向旋转多少度   翻转方向(左手准则)</code></pre><p> 透视：perspective 单位像素  观察距离</p>
+<pre><code>透视写到被观察元素的父盒子上面
+
+旋转效果一般要配合透视</code></pre><p> 3D呈现：transform-style 控制子元素是否开启三维立体环境</p>
+<p>   transform-style：flat 默认的 不开启</p>
+<p>   transform-style：preserve-3d 子元素开启立体空间</p>
+<p>   代码写给父级，但是影响子盒子</p>
+<p>key：浏览器私有前缀 </p>
+<pre><code>-moz- ：Firefox浏览器私有属性
+
+-ms-  ：ie浏览器私有属性
+
+-Webkit-: 代表Safari、chrome私有属性
+
+-o-   : 代表Opera私有属性</code></pre><p>移动布局：</p>
+<p>  视口(viewport)：  浏览器显示页面内容的屏幕区域，可分为布局视口、视觉视口、理想视口</p>
+<pre><code>1.布局视口(layout viewport) ：浏览器默认设置的布局视口，用于解决早期pc端页面在手机上显示的问题
+
+2.视觉视口(visual viewport) ：手机浏览器显示的部分
+
+3.理想视口(ideal viewport)  ：设备有多宽，布局视口就有多宽。 需要手动添加meta视口标签</code></pre><p>meta视口标签：<br>   标准的viewport设置<br>          <img src="/2020/05/16/html-%E7%AC%94%E8%AE%B011/meta.png" alt></p>
+<p>  key：PC端页面1px是等于一个物理像素(屏幕显示的最小颗粒 就是分辨率)的，移动端一个px能显示的物理像素点 的个数，称为物理像素比或屏幕像素比</p>
+<p>倍图：提高倍数提高图片质量，避免图片在手机端放大模糊</p>
+<pre><code>原理：准备的图片比我们实际需要的大小大手机端放大的倍数，然后缩小图，这样在手机端显示的就是图片原本 的清晰度</code></pre><p>背景缩放： background-size：宽 高。只写一个参数就是宽，高等比缩放，单位也可以为百分比</p>
+<pre><code>cover：把背景图像扩展至足够大，使背景图像完全覆盖背景区域(等比缩放，填满，会超出区域)
+
+contain：把图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域(等比缩放，宽或高一个铺 满就不再拉伸，会有空白区域)</code></pre><p>CSS3盒模型：box-sizing：border-box  padding和border不会撑开盒子(低版本浏览器不适用 一般用于移动端)<br>            box-sizing：content-box 传统盒子模型</p>
+<p>特殊样式：<br>            <img src="/2020/05/16/html-%E7%AC%94%E8%AE%B011/hzmx.png" alt></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/16/html-%E7%AC%94%E8%AE%B011/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-html-笔记10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1016,79 +1117,6 @@ border-style：边框样式
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/05/01/html-%E7%AC%94%E8%AE%B02/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-html-笔记1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/01/html-%E7%AC%94%E8%AE%B01/">html 笔记1</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/01/html-%E7%AC%94%E8%AE%B01/" class="archive-article-date">
-  	<time datetime="2020-05-01T01:59:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##基础<br> 骨架标签 <html><head></head><body></body></html></p>
-<p>元素标签的分类：单标签&lt;<em>/&gt;和双标签&lt;</em>&gt;&lt;/*&gt;</p>
-<p>标签关系：嵌套关系和并列关系</p>
-<p>常识：&lt;！doctype html&gt;文档类型：HTML<br>      &lt;HTML Lang=  &gt; 页面语言<br>      &lt;mata charset=  &gt;字符集：GB2312简体 中文、BIG5：繁体中文、GBK：所有中文、UTF-8 ：世界通用语言<br>      <title>标题</title></p>
-<p>常用标签：标题标签h、段落标签p、水平线标签 hr、换行标签br、分区标签div和span</p>
-<p>文本格式化标签：加粗b strong、斜体i em、删除线s del、下划线u ins</p>
-<p>图像标签img 属性：src路径、alt：图像不能显示时的替换文本、title：鼠标悬停时显示的文本、width：宽、height：高、border：边框宽</p>
-<p>链接标签：&lt;a href=”跳转目标” target=”目标窗口的弹出方式”&gt; _self默认 _blank新窗口打开</p>
-<p>注释标签：&lt;!– ***  –&gt;</p>
-<p>瞄点：&lt;a href = #id&gt;<br> base单标签：整体运用&lt;base target=”_blank”&gt;<br>预格式化文本标签；pre</p>
-<p>##特殊字符<br><img src="/.com//zf.jpg" alt></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/01/html-%E7%AC%94%E8%AE%B01/">展开全文 >></a>
         </p>
       
 

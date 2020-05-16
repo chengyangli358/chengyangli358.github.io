@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/5 | 平安喜乐 万事顺心</title>
+  <title>html 笔记11 | 平安喜乐 万事顺心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="平安喜乐 万事顺心">
-<meta property="og:url" content="http://yoursite.com/archives/2020/05/index.html">
+  <meta name="description" content="3D转换：  3D位移：transform：translate3d(x,y,z)  不可省略，可写零 transform：translateX() 仅仅在X轴移动  transform：translateY() 仅仅在Y轴移动  transform：translateZ() 仅仅在Z轴移动  单位一般为px 3D旋转：transform：rotate3d(x,y,z) 沿着轴旋转  多个方向旋转沿">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html 笔记11">
+<meta property="og:url" content="http://yoursite.com/2020/05/16/html-%E7%AC%94%E8%AE%B011/index.html">
 <meta property="og:site_name" content="平安喜乐 万事顺心">
+<meta property="og:description" content="3D转换：  3D位移：transform：translate3d(x,y,z)  不可省略，可写零 transform：translateX() 仅仅在X轴移动  transform：translateY() 仅仅在Y轴移动  transform：translateZ() 仅仅在Z轴移动  单位一般为px 3D旋转：transform：rotate3d(x,y,z) 沿着轴旋转  多个方向旋转沿">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/html-%E7%AC%94%E8%AE%B011/meta.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/html-%E7%AC%94%E8%AE%B011/hzmx.png">
+<meta property="article:published_time" content="2020-05-16T02:48:31.000Z">
+<meta property="article:modified_time" content="2020-05-16T02:51:11.860Z">
 <meta property="article:author" content="柚子">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/16/html-%E7%AC%94%E8%AE%B011/meta.png">
   
     <link rel="alternative" href="/atom.xml" title="平安喜乐 万事顺心" type="application/atom+xml">
   
@@ -199,295 +206,193 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-html-笔记11" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      html 笔记11
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/16/html-%E7%AC%94%E8%AE%B011/" class="archive-article-date">
+
+        
+        <a href="/2020/05/16/html-%E7%AC%94%E8%AE%B011/" class="archive-article-date">
   	<time datetime="2020-05-16T02:48:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/16/html-%E7%AC%94%E8%AE%B011/">html 笔记11</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>3D转换：</p>
+<p> 3D位移：transform：translate3d(x,y,z)  不可省略，可写零</p>
+<pre><code>transform：translateX() 仅仅在X轴移动
 
-        <div class="article-info info-on-right">
-          
-          
+transform：translateY() 仅仅在Y轴移动
 
+transform：translateZ() 仅仅在Z轴移动  单位一般为px</code></pre><p> 3D旋转：transform：rotate3d(x,y,z) 沿着轴旋转  多个方向旋转沿对角线</p>
+<pre><code>transform：rotateX( deg) 沿着X轴正方向旋转多少度   翻转方向(左手准则)
+
+transform：rotateY( deg) 沿着Y轴正方向旋转多少度   翻转方向(左手准则)
+
+transform：rotateZ( deg) 沿着Z轴正方向旋转多少度   翻转方向(左手准则)</code></pre><p> 透视：perspective 单位像素  观察距离</p>
+<pre><code>透视写到被观察元素的父盒子上面
+
+旋转效果一般要配合透视</code></pre><p> 3D呈现：transform-style 控制子元素是否开启三维立体环境</p>
+<p>   transform-style：flat 默认的 不开启</p>
+<p>   transform-style：preserve-3d 子元素开启立体空间</p>
+<p>   代码写给父级，但是影响子盒子</p>
+<p>key：浏览器私有前缀 </p>
+<pre><code>-moz- ：Firefox浏览器私有属性
+
+-ms-  ：ie浏览器私有属性
+
+-Webkit-: 代表Safari、chrome私有属性
+
+-o-   : 代表Opera私有属性</code></pre><p>移动布局：</p>
+<p>  视口(viewport)：  浏览器显示页面内容的屏幕区域，可分为布局视口、视觉视口、理想视口</p>
+<pre><code>1.布局视口(layout viewport) ：浏览器默认设置的布局视口，用于解决早期pc端页面在手机上显示的问题
+
+2.视觉视口(visual viewport) ：手机浏览器显示的部分
+
+3.理想视口(ideal viewport)  ：设备有多宽，布局视口就有多宽。 需要手动添加meta视口标签</code></pre><p>meta视口标签：<br>   标准的viewport设置<br>          <img src="/2020/05/16/html-%E7%AC%94%E8%AE%B011/meta.png" alt></p>
+<p>  key：PC端页面1px是等于一个物理像素(屏幕显示的最小颗粒 就是分辨率)的，移动端一个px能显示的物理像素点 的个数，称为物理像素比或屏幕像素比</p>
+<p>倍图：提高倍数提高图片质量，避免图片在手机端放大模糊</p>
+<pre><code>原理：准备的图片比我们实际需要的大小大手机端放大的倍数，然后缩小图，这样在手机端显示的就是图片原本 的清晰度</code></pre><p>背景缩放： background-size：宽 高。只写一个参数就是宽，高等比缩放，单位也可以为百分比</p>
+<pre><code>cover：把背景图像扩展至足够大，使背景图像完全覆盖背景区域(等比缩放，填满，会超出区域)
+
+contain：把图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域(等比缩放，宽或高一个铺 满就不再拉伸，会有空白区域)</code></pre><p>CSS3盒模型：box-sizing：border-box  padding和border不会撑开盒子(低版本浏览器不适用 一般用于移动端)<br>            box-sizing：content-box 传统盒子模型</p>
+<p>特殊样式：<br>            <img src="/2020/05/16/html-%E7%AC%94%E8%AE%B011/hzmx.png" alt></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/16/html-%E7%AC%94%E8%AE%B011/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/15/html-%E7%AC%94%E8%AE%B010/" class="archive-article-date">
-  	<time datetime="2020-05-15T00:13:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/15/html-%E7%AC%94%E8%AE%B010/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">html 笔记10</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/15/html-%E7%AC%94%E8%AE%B010/">html 笔记10</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/13/html-%E7%AC%94%E8%AE%B09/" class="archive-article-date">
-  	<time datetime="2020-05-13T08:09:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/13/html-%E7%AC%94%E8%AE%B09/">html 笔记9</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/09/html-%E7%AC%94%E8%AE%B08/" class="archive-article-date">
-  	<time datetime="2020-05-09T09:22:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/09/html-%E7%AC%94%E8%AE%B08/">html 笔记8</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/08/html-%E7%AC%94%E8%AE%B07/" class="archive-article-date">
-  	<time datetime="2020-05-08T00:05:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/08/html-%E7%AC%94%E8%AE%B07/">html 笔记7</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/05/html-%E7%AC%94%E8%AE%B06/" class="archive-article-date">
-  	<time datetime="2020-05-05T13:05:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/05/html-%E7%AC%94%E8%AE%B06/">html 笔记6</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/04/html-%E7%AC%94%E8%AE%B05/" class="archive-article-date">
-  	<time datetime="2020-05-04T11:40:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/04/html-%E7%AC%94%E8%AE%B05/">html 笔记5</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/html-%E7%AC%94%E8%AE%B04/" class="archive-article-date">
-  	<time datetime="2020-05-03T08:50:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/html-%E7%AC%94%E8%AE%B04/">html 笔记4</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/02/html-%E7%AC%94%E8%AE%B03/" class="archive-article-date">
-  	<time datetime="2020-05-02T10:42:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/02/html-%E7%AC%94%E8%AE%B03/">html 笔记3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/01/html-%E7%AC%94%E8%AE%B02/" class="archive-article-date">
-  	<time datetime="2020-05-01T07:46:24.163Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/01/html-%E7%AC%94%E8%AE%B02/">html-笔记2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/05/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/05/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -511,8 +416,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
