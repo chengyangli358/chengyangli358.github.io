@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | 平安喜乐 万事顺心</title>
+  <title>JS 笔记03 | 平安喜乐 万事顺心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="平安喜乐 万事顺心">
-<meta property="og:url" content="http://yoursite.com/archives/2020/page/2/index.html">
+  <meta name="description" content="JS循环：    断点调试：f12- sources-找到需要调试的文件-在程序的某一行设置断点 1.for循环： 语法格式：for(初始化变量；条件表达式；操作表达式) { 循环体}  2.while循环： while(条件表达式) {循环体代码} 当条件表达式为真，则执行循环体，里面也要有i++，防 止死循环     do while 是先执行一次循环体 再判断，表达式为真，再执行循环体 do">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS 笔记03">
+<meta property="og:url" content="http://yoursite.com/2020/05/24/JS-%E7%AC%94%E8%AE%B003/index.html">
 <meta property="og:site_name" content="平安喜乐 万事顺心">
+<meta property="og:description" content="JS循环：    断点调试：f12- sources-找到需要调试的文件-在程序的某一行设置断点 1.for循环： 语法格式：for(初始化变量；条件表达式；操作表达式) { 循环体}  2.while循环： while(条件表达式) {循环体代码} 当条件表达式为真，则执行循环体，里面也要有i++，防 止死循环     do while 是先执行一次循环体 再判断，表达式为真，再执行循环体 do">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-24T11:36:04.000Z">
+<meta property="article:modified_time" content="2020-05-24T11:37:05.629Z">
 <meta property="article:author" content="柚子">
 <meta name="twitter:card" content="summary">
   
@@ -199,214 +203,181 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JS-笔记03" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JS 笔记03
+    </h1>
+  
+
+        
+        <a href="/2020/05/24/JS-%E7%AC%94%E8%AE%B003/" class="archive-article-date">
+  	<time datetime="2020-05-24T11:36:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>JS循环：</p>
+<p>   断点调试：f12- sources-找到需要调试的文件-在程序的某一行设置断点</p>
+<pre><code>1.for循环： 语法格式：for(初始化变量；条件表达式；操作表达式) { 循环体}
+
+2.while循环： while(条件表达式) {循环体代码} 当条件表达式为真，则执行循环体，里面也要有i++，防 止死循环
+
+   do while 是先执行一次循环体 再判断，表达式为真，再执行循环体 do{循环体} while (条件)</code></pre><p>   关键字:continue:立即跳出本次循环，继续下一次循环</p>
+<pre><code>break：立即跳出整个循环(循环结束)</code></pre><p>数组(Array)：一组数据的集合，在数组中可以存放任意类型的元素</p>
+<p>  创建方法：1.利用new创建数组：  var 数组名 = new Array();  var arr = new Array(); 创建一个新的空 数组</p>
+<pre><code>2.利用数组字面量创建数组：var 数组名 = 【1,2,3】；数字里面的数据要用逗号隔开，字符串用 引号</code></pre><p>  访问数组数据：格式： 数组名【索引号】   索引号从零开始</p>
+<p>  遍历数组：把数组的元素从头到尾访问一遍(用循环)</p>
+<p>  数组长度：数组名.length</p>
+<p>  新增数组元素：1.通过修改length长度以及索引号增加数组元素，增加就是对增加长度的索引号直接赋值，重 复的索引会被覆盖</p>
+<p> 冒泡排序：一次比较两个数据，对数据进行排序</p>
+<p>函数：封装了一段可被重复调用执行的代码块，可以实现大量代码的调用</p>
+<p>   函数的使用：1.声明函数： function 函数名() {函数体}</p>
+<pre><code>2.调用函数：函数名();</code></pre><p>   函数的封装：就是把一个或者多个功能通过函数的方式封装起来，对外只提供一个简单的函数接口</p>
+<p>   函数的参数：格式：function 函数名(形参1，形参2，…){}   调用： 函数名(实参1，实参2，…)</p>
+<pre><code>             实参是实际的参数。形参是接受实参的，类似于一个变量。
+
+             利用函数的参数可以实现函数重复不同的代码
+
+当实参与形参个数不匹配：1.实参的个数多于形参：多的实参会被忽略
+
+                        2.实参的个数小于形参：多余的形参定义为undefined 最终的结果NaN</code></pre><p>   函数的返回值：return语句：函数只是实现某种功能，最终的结果返回给调用者。</p>
+<pre><code>return还有终止函数的功能，只能返回一个值，如果有多个值，只返回最后一个，可以将多 个值放在数组中返回以实现返回多个值的效果
+
+函数如果没有return，则返回undefined</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/05/html-%E7%AC%94%E8%AE%B06/" class="archive-article-date">
-  	<time datetime="2020-05-05T13:05:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/05/html-%E7%AC%94%E8%AE%B06/">html 笔记6</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/24/JS-%E7%AC%94%E8%AE%B003/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/04/html-%E7%AC%94%E8%AE%B05/" class="archive-article-date">
-  	<time datetime="2020-05-04T11:40:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/21/JS-%E7%AC%94%E8%AE%B002/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS 笔记02</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/04/html-%E7%AC%94%E8%AE%B05/">html 笔记5</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/html-%E7%AC%94%E8%AE%B04/" class="archive-article-date">
-  	<time datetime="2020-05-03T08:50:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/html-%E7%AC%94%E8%AE%B04/">html 笔记4</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/02/html-%E7%AC%94%E8%AE%B03/" class="archive-article-date">
-  	<time datetime="2020-05-02T10:42:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/02/html-%E7%AC%94%E8%AE%B03/">html 笔记3</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/01/html-%E7%AC%94%E8%AE%B02/" class="archive-article-date">
-  	<time datetime="2020-05-01T07:46:24.163Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/01/html-%E7%AC%94%E8%AE%B02/">html-笔记2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/01/html-%E7%AC%94%E8%AE%B01/" class="archive-article-date">
-  	<time datetime="2020-05-01T01:59:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/01/html-%E7%AC%94%E8%AE%B01/">html 笔记1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/14/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-14T10:47:48.496Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2020/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -430,8 +401,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
