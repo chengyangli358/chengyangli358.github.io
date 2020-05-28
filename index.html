@@ -201,6 +201,126 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JS-笔记04" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/28/JS-%E7%AC%94%E8%AE%B004/">JS 笔记04</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/28/JS-%E7%AC%94%E8%AE%B004/" class="archive-article-date">
+  	<time datetime="2020-05-28T12:53:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>arguments：当不确定有多少个参数传递的时候，可以用arguments来获取，他是当前函数的一个内置对象，所有 函数都内置了一个arguments对象，储存了传递的所有实参。</p>
+<p>  arguments是以伪数组的形式存在的(有长度，按索引存储，但是没有数组的一些方法，就称为伪数组)</p>
+<p>函数的声明方式2：函数表达式：var 变量名 = function() {}; 这个函数是没有名字的，所以称为函数表达式</p>
+<pre><code>调用方法： 变量名();</code></pre><p>JS作用域： 一段程序代码中所用到的名字并不总是有效和可用的，而限定这个名字的可用性的代码范围就是这 个名字的作用域，作用域的使用提高了程序逻辑的局部性，增强了程序的可靠性，减少了名字冲突。</p>
+<p>JS作用域(es6之前的)：全局作用域：整个script标签，或者是一个单独的js文件</p>
+<pre><code>局部作用域(函数作用域)：就是在函数内部的，这个代码的名字只在函数内部起效果。</code></pre><p>  es6之后才新增的块级作用域，是花括号里的变量</p>
+<p>作用域链：内部函数访问外部函数的变量采用的是链式查找的方式来决定取哪个值，这种结构我们称为作用域链 (就近原则)</p>
+<p>key：在函数内部没有声明直接赋值的变量也是全局变量</p>
+<pre><code>函数的形参也属于局部变量
+
+全局变量只有浏览器关闭之后才销毁，比较占用内存资源，局部变量在程序执行完毕后就会销毁，比较节 约内存资源。</code></pre><p>JS引擎运行Js分为两部： 预解析、代码执行</p>
+<p>   JS预解析：Js引擎会把js里面所有的 var 和function提升到当前作用域的最前面</p>
+<p>   代码执行：按照代码书写的顺序从上往下执行。</p>
+<pre><code>变量提升：预解析只提升变量的声明，不提升变量的值。函数表达式也是同样的原理。函数声明会将函 数一起提升，方法里面的变量也会提升到作用域的最前面，不提升变量值。</code></pre><p>JS对象(object)：对象是一组无序的相关属性和方法的集合，所有的事物都是对象，例如字符串、数值、数组、 函数等</p>
+<pre><code>对象是由属性和方法组成的
+
+   属性：事物的特征，在对象中用属性来表示(常用名词)
+
+   方法：事物的行为，在对象中用方法来表示(常用动词)</code></pre><p>创建对象的方法：</p>
+<p>   1.利用字面量创建对象： var obj = {name: ‘张三’<br>                                     age:  ‘123’<br>                                     …<br>                                     fangfa: function(){函数}<br>                                     }</p>
+<pre><code>     对象里面的属性或者方法采用键值对的形式，多个属性或者方法中间用逗号隔开，方法冒号后面跟的 是一个匿名函数。
+
+调用：属性： console.log(对象名.属性名) 还可以 对象名[&apos;属性名&apos;]
+
+      方法：对象名.属性名();</code></pre><p>   2.利用object创建对象：</p>
+<pre><code>var obj = new Object();
+obj.name = &apos;张三&apos;；
+obj.age  = &apos;123&apos;
+...
+obj.fangfa = function(){}</code></pre><p>   利用等号赋值的方法添加对象的属性和方法，每个属性和方法之间用分号结束，调用方法不变。</p>
+<p>   3.利用构造函数创建对象(类似封装)：</p>
+<pre><code>因为利用字面量和object的方式一次只能创建一个对象，里面的很多属性和方法都是相同的，我 们只能复制，因此我们可以利用函数的方法 重复这些相同的代码 我们就把这个函数称为 构造函数，又因为这 个函数里面封装的不是普通的代码，而是对象。所以构造函数，就是把我们对象里面一些相同的属性和方法抽象 出来封装到函数里面。</code></pre><p>构造函数： 语法格式：</p>
+<pre><code>     function 构造函数名(形参1，形参2，...){
+                             this.属性 = 参数1；  ...
+                             this.方法 = function(){}
+                           }
+
+调用：  new 构造函数名(实参，实参);</code></pre><p>便利对象属性：</p>
+<pre><code>for...in语句：对于数组或者对象的属性进行循环操作
+
+语法格式：for ( var 变量 in 对象)，输出变量就是得到对象中的所有属性名，输出对象.变量就是 属性值</code></pre><p>key： 1.函数的首字母要大写</p>
+<pre><code>2.调用构造函数返回的是对象，不需要return返回值，可以直接赋给变量
+
+3.调用构造函数，必须使用new  调用函数，就创建了个对象
+
+4.我们的属性和方法前面必须添加 this
+
+5.调用构造函数也称为对象的实例化</code></pre><p>key:变量和属性：</p>
+<pre><code>   相同点：都是用来储存数据的
+
+   不同点：变量是单独声明并赋值，使用的时候直接写变量，
+
+           属性在对象里面不需要声明，使用的时候必须是对象.属性
+
+函数和方法：
+
+       相同点：都是实现某种功能，做某件事
+
+       不同点：函数是单独声明 并且调用的是函数名()，是单独存在的，方法是在对象里面，调用的时候  对象.方法()。</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/28/JS-%E7%AC%94%E8%AE%B004/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JS-笔记03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1026,87 +1146,6 @@ auto：超出才显示滚动条</code></pre><p>CSS用户界面样式：<br>     
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/05/09/html-%E7%AC%94%E8%AE%B08/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-html-笔记7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/08/html-%E7%AC%94%E8%AE%B07/">html 笔记7</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/08/html-%E7%AC%94%E8%AE%B07/" class="archive-article-date">
-  	<time datetime="2020-05-08T00:05:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>CSS书写顺序：
-
-1.布局定位属性：display/ position/ float/ clear/ visibility/ overflow
-
-2.自身属性：width/ height/ margin/ padding/ border/ backgroud
-
-3.文本属性：color/ font/ text-decoration/ text-align/ vertical-align/ white-space/ break -work
-
-4.其他属性(CSS3)：content/ cursor/ border-radius/ box-shadow/ text-shadow/  backgroud:linear-gradient...</code></pre><p>定位(position)： 定位=定位模式+边偏移</p>
-<p>在CSS中，通过top、bottom、left、right属性定义边偏移</p>
-<p>定位模式：语法： 选择器{ position：属性值；}</p>
-<p>属性值：static：静态定位   (默认的定位，没有边偏移，一般不使用)</p>
-<pre><code>    relative：相对定位 (相对自身原来的位置偏移，原来占有的区域依然占有)
-
-absolute：绝对定位 (以带有定位的父级元素移动位置，如果父级没有定位，则 以浏览器为标准，完全脱标，不占位置)(&quot;子元素如果用绝对定位，父级要用相对定位&quot;) 也会将display改为行内块        
-
-fixed：固定定位    (完全脱标，不占位置、跟父元素无关，只认浏览器的可视 窗口，不会随滚动条滚动 也会将display改为行内块)</code></pre><p>绝对定位的盒子居中：left：50%  (让盒子的左侧移动到父级元素的水平中心位置)                           margin-left：-100px； (让盒子向左移动自身的一半)</p>
-<p>堆叠顺序：可以用z-index：数值；数值越大盒子就放在上面，没有单位，只适用于定位</p>
-<p>key：<br>       定位的盒子一般要单写宽度100%<br>       浮动元素和绝对定位都不会发生外边距合并的问题</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/08/html-%E7%AC%94%E8%AE%B07/">展开全文 >></a>
         </p>
       
 
